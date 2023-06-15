@@ -1,4 +1,5 @@
-from core.user_interface import UserInterface, UserRepositoryInterface
+from core.user_interface import UserInterface
+from core.user_repository_interface import UserRepositoryInterface
 
 
 class LoginUseCase(UserInterface):
