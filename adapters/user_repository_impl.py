@@ -1,5 +1,5 @@
-from entities.user import User
-from entities.user_repository_interface import UserRepositoryInterface
+from core.user import User
+from core.user_repository_interface import UserRepositoryInterface
 
 
 class UserRepositoryImpl(UserRepositoryInterface):

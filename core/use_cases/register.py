@@ -1,4 +1,4 @@
-from entities.user_interface import UserInterface, UserRepositoryInterface
+from core.user_interface import UserInterface, UserRepositoryInterface
 
 
 class RegisterUseCase(UserInterface):
