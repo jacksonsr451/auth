@@ -1,4 +1,4 @@
-from interfaces.user_interface import UserInterface, UserRepositoryInterface
+from entities.user_interface import UserInterface, UserRepositoryInterface
 
 
 class RegisterUseCase(UserInterface):
