@@ -5,14 +5,12 @@ from wtforms import PasswordField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 from adapters.user_repository_impl import UserRepositoryImpl
-from core.use_cases.login import LoginUseCase
-from core.use_cases.register import RegisterUseCase
+from core.use_cases.auth_use_cases import AuthUseCases
 
 auth_bp = Blueprint('livros', __name__)
 
 user_repository = UserRepositoryImpl()
-login_use_case = LoginUseCase(user_repository)
-register_use_case = RegisterUseCase(user_repository)
+auth_use_cases = AuthUseCases(user_repository)
 
 
 class LoginForm(FlaskForm):
@@ -33,7 +31,7 @@ def login():
     if form.validate_on_submit():
         username = form.username.data
         password = form.password.data
-        if login_use_case.login(username, password):
+        if auth_use_cases.login(username, password):
             access_token = create_access_token(identity=username)
             return jsonify({'access_token': access_token}), 200
     return jsonify({'message': 'Invalid username or password'}), 401
@@ -45,7 +43,7 @@ def register():
     if form.validate_on_submit():
         username = form.username.data
         password = form.password.data
-        if register_use_case.register(username, password):
+        if auth_use_cases.register(username, password):
             return jsonify({'message': 'Registration successful'}), 200
     return (
         jsonify({'message': 'Invalid username or username already exists'}),
