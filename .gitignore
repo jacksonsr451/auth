@@ -1,0 +1,48 @@
+# Arquivos de ambiente
+.venv
+.env
+
+# Byte-compiled / pré-compiled
+*.pyc
+__pycache__/
+$py.class
+
+# Arquivos de build gerados
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+env_bak/
+
+# Arquivos de registro e saída
+*.log
+
+# Arquivos de backup
+*.bak
+*.swp
+*~
+._*
+
+# Outros arquivos
+.DS_Store
+Thumbs.db
+Icon?
+
+# Dependências geradas pelo pip
+# Remova o "#" abaixo se você estiver usando pipenv
+# Pipfile.lock
+
+# Dependências geradas pelo poetry
+# Remova o "#" abaixo se você estiver usando poetry
+# poetry.lock
+
+# Dependências geradas pelo pip-tools
+# requirements.txt
+# pip-sync
+
+# Dependências geradas pelo PyInstaller
+# remove o "#" abaixo se você estiver usando o PyInstaller
+# dist/
