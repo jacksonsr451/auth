@@ -1,5 +1,6 @@
 # Arquivos de ambiente
 .venv
+.vscode
 .env
 
 # Byte-compiled / pré-compiled
