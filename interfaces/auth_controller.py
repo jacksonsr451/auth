@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired
 from adapters.user_repository_impl import UserRepositoryImpl
 from core.use_cases.auth_use_cases import AuthUseCases
 
-auth_bp = Blueprint('livros', __name__)
+auth_bp = Blueprint('auth', __name__)
 
 user_repository = UserRepositoryImpl()
 auth_use_cases = AuthUseCases(user_repository)
